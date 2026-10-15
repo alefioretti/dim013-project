@@ -15,5 +15,17 @@ def load_data(path: str) -> pd.DataFrame:
     return pd.read_csv(path, sep=",", encoding="utf-8-sig")
 
 
+def count_rows(df: pd.DataFrame) -> int:
+    """Count the number of rows in a DataFrame.
+
+    Args:
+        df: The DataFrame to count.
+
+    Returns:
+        The number of data rows (header excluded).
+    """
+    return len(df)
+
+
 if __name__ == "__main__":
     print(load_data(sys.argv[1]).head())
