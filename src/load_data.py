@@ -22,7 +22,7 @@ def count_rows(df: pd.DataFrame) -> int:
         df: The DataFrame to count.
 
     Returns:
-        The number of rows.
+        The number of data rows (header excluded).
     """
     return len(df)
 
